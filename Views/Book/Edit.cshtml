@@ -1,0 +1,35 @@
+﻿@model BookViewModel
+
+<h1>Edit Book info</h1>
+<hr />
+<form method="post">
+    <div class="form group">
+        <label>Book Title</label>
+        <input type="text" name="Book Title" value="@Model.Title" />
+    </div>
+
+    <div class="form group">
+        <label>Author</label>
+        <input type="text" name="Author" value="@Model.Author" />
+    </div>
+
+    <div class="form group">
+        <label>Description</label>
+        <input type="text" name="Description" value="@Model.Description" />
+    </div>
+
+    <div>
+        <select asp-for="GenreId" asp-items="@Model.Genres">
+            <option>Choice one</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Image">Choice file</label>
+        <input asp-for="Image" class="form-control" />
+    </div>
+
+    <div>
+        <input type="submit" value="Edit Book" />
+    </div>
+</form>
